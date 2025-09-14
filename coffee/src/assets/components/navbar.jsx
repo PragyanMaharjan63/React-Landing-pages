@@ -1,6 +1,5 @@
 import { Menu, Search } from "lucide-react";
 import { useEffect, useState } from "react";
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 export default function Navbar() {
   const [hamburger, setHamburger] = useState(false);
@@ -31,22 +30,46 @@ export default function Navbar() {
             hamburger ? `absolute` : `hidden`
           } sm:translate-x-0 sm:translate-y-0`}
         >
-          <li className="  px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 sm:text-neutral-300 sm:bg-transparent  ">
+          <li
+            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+              scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
+            } sm:bg-transparent `}
+          >
             HOME
           </li>
-          <li className="  px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 sm:text-neutral-300 sm:bg-transparent ">
+          <li
+            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+              scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
+            } sm:bg-transparent`}
+          >
             COFFEE
           </li>
-          <li className="  px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 sm:text-neutral-300 sm:bg-transparent ">
+          <li
+            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+              scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
+            } sm:bg-transparent`}
+          >
             BAKERY
           </li>
-          <li className="  px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 sm:text-neutral-300 sm:bg-transparent ">
+          <li
+            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+              scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
+            } sm:bg-transparent`}
+          >
             SHOP
           </li>
-          <li className="  px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 sm:text-neutral-300 sm:bg-transparent ">
+          <li
+            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+              scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
+            } sm:bg-transparent`}
+          >
             ABOUT
           </li>
-          <li className="  px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 sm:text-neutral-300 sm:bg-transparent">
+          <li
+            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+              scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
+            } sm:bg-transparent`}
+          >
             LOGIN
           </li>
         </div>

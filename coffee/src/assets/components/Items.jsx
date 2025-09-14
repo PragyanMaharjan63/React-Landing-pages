@@ -1,7 +1,7 @@
 export default function Items() {
   return (
     <>
-      <div className="flex flex-col sm:flex-row w-full sm:w-[80vw] justify-between justify-self-center">
+      <div className="flex my-20 flex-col sm:flex-row w-full sm:w-[80vw] justify-between justify-self-center">
         <div className="flex flex-col items-center justify-center">
           <img className="size-20" src="/svg/mug.svg" alt="" />
           <p>Hot Coffee</p>

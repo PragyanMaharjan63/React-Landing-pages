@@ -1,34 +1,34 @@
 import React from "react";
 
-export default function CoffeeMenu() {
-  const coffee = [
+export default function DesertMenu() {
+  const desert = [
     {
       id: 1,
-      image: "/images/coffees/lungo.jpg",
-      Item: "Lungo Coffee",
-      Desc: "An espresso coffee drink, topped with a small",
+      image: "/images/Deserts/gulabjamun.jpg",
+      Item: "Gulab Jamun",
+      Desc: "made with milk solids, sugar, rose water & cord",
       Price: "Rs. 199",
     },
     {
       id: 2,
-      image: "/images/coffees/Dalgona.jpg",
-      Item: "Dalgona Coffee",
-      Desc: "whipped coffee made using instant coffee",
-      Price: "Rs. 159",
+      image: "/images/Deserts/Tiramisu.jpg",
+      Item: "Chocolate Tiramisu",
+      Desc: "made with layers of mascarpone cream, chocolate",
+      Price: "Rs. 250",
     },
     {
       id: 3,
-      image: "/images/coffees/icedCoffee.jpg",
-      Item: "Iced Coffee",
-      Desc: "Iced coffee is a coffee beverage served cold",
-      Price: "Rs. 149",
+      image: "/images/Deserts/churros.jpg",
+      Item: "Churros",
+      Desc: "Hot chocolate made with bittersweet chocolate",
+      Price: "Rs. 170",
     },
     {
       id: 4,
-      image: "/images/coffees/filterCoffee.jpg",
-      Item: "Filter Coffee",
-      Desc: "75% coffee and 25% chicary freshly roasted",
-      Price: "Rs. 59",
+      image: "/images/Deserts/Lamingtons.jpg",
+      Item: "Asutralian Lamingtons",
+      Desc: "Made with A delicious Sponge Cake",
+      Price: "Rs. 5280",
     },
   ];
 
@@ -38,10 +38,10 @@ export default function CoffeeMenu() {
       className="flex flex-col items-center w-full"
     >
       <p className="font-bold text-[#2D251E] p-2 m-2 text-xl">
-        OUR SPECIAL COFFEE
+        OUR SPECIAL DESERTS
       </p>
       <div className="flex grow flex-wrap w-full justify-evenly sm:w-[80vw]">
-        {coffee.map((item) => {
+        {desert.map((item) => {
           return (
             <div
               className="w-80 p-2 bg-[#EEEBE6] flex flex-col justify-evenly m-2 gap-y-3 rounded-lg"
