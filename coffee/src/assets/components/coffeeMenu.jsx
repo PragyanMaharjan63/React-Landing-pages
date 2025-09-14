@@ -35,7 +35,7 @@ export default function CoffeeMenu() {
   return (
     <div
       style={{ fontFamily: "'Poppins', sans-serif" }}
-      className="flex flex-col items-center w-full"
+      className="flex  flex-col items-center "
     >
       <p className="font-bold text-[#2D251E] p-2 m-2 text-xl">
         OUR SPECIAL COFFEE
