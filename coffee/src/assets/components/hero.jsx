@@ -9,7 +9,7 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="absolute flex flex-col gap-y-3 text-white translate-x-0 md:-translate-x-[20vw] sm:w-sm">
+        <div className="absolute flex flex-col gap-y-3 p-3 text-white translate-x-0 md:-translate-x-[20vw] sm:w-sm">
           <p className="text-lg sm:text-xl">Welcome!</p>
           <p className="text-xl sm:text-2xl">
             We serve the richest coffee in the city!

@@ -4,7 +4,7 @@ export default function BeansPromo() {
   return (
     <div
       style={{ fontFamily: "'Poppins', 'sans-serif'" }}
-      className="flex justify-between items-center justify-self-center "
+      className="flex justify-center md:justify-between items-center  w-full"
     >
       <img
         className="hidden md:flex  sm:size-60"
