@@ -55,17 +55,21 @@ export default function CoffeeMenu() {
               initial={blurUp}
               animate={noblurUp}
               transition={{ duration: 0.2, delay: 0.4 }}
-              className="w-80 p-2 bg-[#EEEBE6] flex flex-col justify-evenly m-2 gap-y-3 rounded-lg"
+              className="w-80 realtive p-4 bg-[#EEEBE6] flex flex-col justify-evenly m-2 gap-y-3 rounded-lg"
               key={item.id}
             >
               <img className="w-80 rounded-lg" src={item.image} alt="" />
-              <p className="text-xl font-semibold text-[#62584C]">
-                {item.Item}
-              </p>
-              <p className="text-sm text-neutral-500">{item.Desc}</p>
-              <div className="flex justify-between">
-                <p className="text-[#62584C] font-bold text-lg">{item.Price}</p>
-                <button className="bg-[#2F251C] w-max text-white py-1 px-3 text-sm rounded-lg">
+              <div>
+                <p className="text-xl font-semibold text-[#62584C]">
+                  {item.Item}
+                </p>
+                <p className="text-sm text-neutral-400">{item.Desc}</p>
+              </div>
+              <div className="flex justify-between items-end relative">
+                <p className="text-[#62584C]  bottom-0 font-bold text-lg">
+                  {item.Price}
+                </p>
+                <button className="bg-[#2F251C] w-max text-white py-2 px-6 text-sm rounded-lg">
                   Order Now
                 </button>
               </div>

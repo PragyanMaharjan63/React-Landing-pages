@@ -14,7 +14,7 @@ export default function Hero() {
         <img
           src="/images/heroImage.jpg"
           alt=""
-          className="object-cover inset-0 w-full h-[70vh]"
+          className="object-cover inset-0 w-full h-[100vh]"
         />
         <div className="absolute inset-0 bg-black/50"></div>
 

@@ -21,9 +21,9 @@ function App() {
         <section ref={homeRef}>
           <Hero />
         </section>
-        <section>
+        {/* <section>
           <Items />
-        </section>
+        </section> */}
         <section ref={coffeeRef}>
           <Menu />
         </section>
