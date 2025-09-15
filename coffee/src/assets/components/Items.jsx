@@ -4,7 +4,7 @@ export default function Items() {
   const noblurUp = { opacity: 1, y: 0, filter: "blur(0px)" };
   return (
     <>
-      <div className="flex my-20 flex-col sm:flex-row w-full sm:w-[80vw] justify-between justify-self-center">
+      <div className="flex my-20 flex-col sm:flex-row w-full sm:w-[80vw] justify-between justify-self-center gap-y-10">
         <div className="flex flex-col items-center justify-center">
           <motion.img
             initial={blurUp}
