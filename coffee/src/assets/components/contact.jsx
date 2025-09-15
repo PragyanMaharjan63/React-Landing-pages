@@ -30,7 +30,7 @@ export default function Contact() {
             initial={blurUp}
             animate={noblurUp}
             transition={{ duration: 0.2, delay: 0.5 }}
-            className="text-stone-700 text-sm sm:text-xl"
+            className="text-stone-700 text-sm sm:text-xl px-2"
           >
             {" "}
             subscribe to our newsletter and get 15% off discound code.
@@ -39,7 +39,7 @@ export default function Contact() {
             initial={blurUp}
             animate={noblurUp}
             transition={{ duration: 0.2, delay: 0.6 }}
-            className="flex gap-x-3 flex-wrap justify-center"
+            className="flex realtive gap-x-3 flex-wrap justify-center"
           >
             <div className="relative flex bg-white rounded-full p-3">
               <Mail />
@@ -47,11 +47,11 @@ export default function Contact() {
                 type="text"
                 name="email address"
                 id=""
-                className="bg-white px-2 w-60 outline-none"
+                className="bg-white px-2 w-72 outline-none"
                 placeholder="Email address"
               />
             </div>
-            <button className="bg-[#2F251C] py-3 px-6 rounded-full text-white">
+            <button className="bg-[#2F251C] py-3 px-6 rounded-full text-white absolute right-0">
               Subscribe
             </button>
           </motion.div>
