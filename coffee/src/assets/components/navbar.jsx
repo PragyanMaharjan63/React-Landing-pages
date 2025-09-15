@@ -1,5 +1,6 @@
 import { Menu, Search } from "lucide-react";
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 export default function Navbar() {
   const [hamburger, setHamburger] = useState(false);
@@ -24,57 +25,87 @@ export default function Navbar() {
           scrolled ? "bg-[#E2D9C8] text-stone-800" : "bg-transparent"
         }`}
       >
-        <div>LOGO</div>
+        <motion.div
+          initial={{ y: 30, filter: "blur(10px)" }}
+          animate={{ y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.2, delay: 0.2 }}
+          className="font-semibold"
+        >
+          COFFEE
+        </motion.div>
         <div
           className={`list-none sm:gap-x-5 md:gap-x-10 sm:relative right-0 translate-y-7 -translate-x-5 sm:flex ${
             hamburger ? `absolute` : `hidden`
           } sm:translate-x-0 sm:translate-y-0`}
         >
-          <li
-            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+          <motion.li
+            initial={{ y: 30, filter: "blur(10px)" }}
+            animate={{ y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.2, delay: 0.3 }}
+            className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
-            } sm:bg-transparent `}
+            } sm:bg-transparent  hover:cursor-pointer`}
           >
             HOME
-          </li>
-          <li
-            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+          </motion.li>
+          <motion.li
+            initial={{ y: 30, filter: "blur(10px)" }}
+            animate={{ y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.2, delay: 0.4 }}
+            className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
-            } sm:bg-transparent`}
+            } sm:bg-transparent hover:cursor-pointer`}
           >
             COFFEE
-          </li>
-          <li
-            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+          </motion.li>
+          <motion.li
+            initial={{ y: 30, filter: "blur(10px)" }}
+            animate={{ y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.2, delay: 0.5 }}
+            className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
-            } sm:bg-transparent`}
+            } sm:bg-transparent hover:cursor-pointer`}
           >
             BAKERY
-          </li>
-          <li
-            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+          </motion.li>
+          <motion.li
+            initial={{ y: 30, filter: "blur(10px)" }}
+            animate={{ y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.2, delay: 0.6 }}
+            className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
-            } sm:bg-transparent`}
+            } sm:bg-transparent hover:cursor-pointer`}
           >
             SHOP
-          </li>
-          <li
-            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+          </motion.li>
+          <motion.li
+            initial={{ y: 30, filter: "blur(10px)" }}
+            animate={{ y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.2, delay: 0.7 }}
+            className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
-            } sm:bg-transparent`}
+            } sm:bg-transparent hover:cursor-pointer`}
           >
             ABOUT
-          </li>
-          <li
-            className={` px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
+          </motion.li>
+          <motion.li
+            initial={{ y: 30, filter: "blur(10px)" }}
+            animate={{ y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.2, delay: 0.8 }}
+            className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
-            } sm:bg-transparent`}
+            } sm:bg-transparent hover:cursor-pointer`}
           >
             LOGIN
-          </li>
+          </motion.li>
         </div>
 
-        <div className="flex gap-2">
+        <motion.div
+          initial={{ y: 30, filter: "blur(10px)" }}
+          animate={{ y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.2, delay: 0.9 }}
+          className="flex gap-2"
+        >
           <Search />
           <Menu
             className="flex sm:hidden"
@@ -82,7 +113,7 @@ export default function Navbar() {
               setHamburger((prev) => !prev);
             }}
           />
-        </div>
+        </motion.div>
       </div>
     </>
   );

@@ -1,7 +1,16 @@
+import { delay } from "motion";
+import { motion } from "motion/react";
 export default function Hero() {
+  const blurUp = { opacity: 0, y: 30, filter: "blur(10px)" };
+  const noblurUp = { opacity: 1, y: 0, filter: "blur(0px)" };
   return (
     <>
-      <div className="flex relative justify-center items-center">
+      <motion.div
+        initial={{ filter: "blur(10px)" }}
+        animate={{ filter: "blur(0px)" }}
+        transition={{ duration: 0.4 }}
+        className="flex relative justify-center items-center"
+      >
         <img
           src="/images/heroImage.jpg"
           alt=""
@@ -10,15 +19,32 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="absolute flex flex-col gap-y-3 p-3 text-white translate-x-0 md:-translate-x-[20vw] sm:w-sm">
-          <p className="text-lg sm:text-xl">Welcome!</p>
-          <p className="text-xl sm:text-2xl">
+          <motion.p
+            initial={blurUp}
+            animate={noblurUp}
+            transition={{ delay: 0.3, duration: 0.3 }}
+            className="text-lg sm:text-xl"
+          >
+            Welcome!
+          </motion.p>
+          <motion.p
+            initial={blurUp}
+            animate={noblurUp}
+            transition={{ delay: 0.4, duration: 0.3 }}
+            className="text-xl sm:text-2xl"
+          >
             We serve the richest coffee in the city!
-          </p>
-          <button className="flex bg-white text-black w-max px-9 py-3 rounded-full text-sm mt-3">
+          </motion.p>
+          <motion.button
+            initial={blurUp}
+            animate={noblurUp}
+            transition={{ delay: 0.6, duration: 0.3 }}
+            className="flex bg-white text-black w-max px-9 py-3 rounded-full text-sm mt-3"
+          >
             Order Now
-          </button>
+          </motion.button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
