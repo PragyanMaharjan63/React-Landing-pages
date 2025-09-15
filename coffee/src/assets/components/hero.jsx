@@ -18,7 +18,7 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="absolute flex flex-col gap-y-3 p-3 text-white translate-x-0 md:-translate-x-[20vw] sm:w-sm">
+        <div className="absolute flex flex-col gap-y-3 p-3 text-white translate-x-0 md:-translate-x-[20vw] m">
           <motion.p
             initial={blurUp}
             animate={noblurUp}
@@ -31,9 +31,9 @@ export default function Hero() {
             initial={blurUp}
             animate={noblurUp}
             transition={{ delay: 0.4, duration: 0.3 }}
-            className="text-xl sm:text-2xl"
+            className="text-xl sm:text-5xl"
           >
-            We serve the richest coffee in the city!
+            We serve the richest coffee in the city.
           </motion.p>
           <motion.button
             initial={blurUp}

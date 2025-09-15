@@ -8,7 +8,7 @@ export default function Contact() {
     <>
       <div
         style={{ fontFamily: "'Poppins', 'sans-serif'" }}
-        className="flex relative justify-center items-center h-[35vh]"
+        className="flex relative justify-center items-center h-[35vh] bg-[#E2D9C8]"
       >
         <motion.img
           initial={{ opacity: 0, x: -30, filter: "blur(10px)" }}
@@ -17,7 +17,7 @@ export default function Contact() {
           alt="beans"
           className="absolute top-0 left-0 hidden md:flex size-60"
         />
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-center items-center gap-y-5">
           <motion.p
             initial={blurUp}
             animate={noblurUp}

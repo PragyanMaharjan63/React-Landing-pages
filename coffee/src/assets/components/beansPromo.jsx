@@ -7,7 +7,7 @@ export default function BeansPromo() {
   return (
     <div
       style={{ fontFamily: "'Poppins', 'sans-serif'" }}
-      className="flex justify-center md:justify-between items-center  w-full"
+      className="flex justify-center md:justify-between items-center  w-full bg-[#E2D9C8]"
     >
       <motion.img
         initial={{ opacity: 0, x: -30, filter: "blur(10px)" }}

@@ -44,7 +44,7 @@ export default function DesertMenu() {
         initial={blurUp}
         animate={noblurUp}
         transition={{ duration: 0.2, delay: 0.3 }}
-        className="font-bold text-[#2D251E] p-2 m-2 text-xl"
+        className="font-bold text-[#2D251E] p-2 m-8 text-xl sm:text-4xl"
       >
         OUR SPECIAL DESERTS
       </motion.p>

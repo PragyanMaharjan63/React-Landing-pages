@@ -16,7 +16,7 @@ function App() {
   const contactRef = useRef(null);
   return (
     <>
-      <div>
+      <div className="flex flex-col gap-y-40">
         <Navbar refs={{ homeRef, coffeeRef, shopRef, reviewRef, contactRef }} />
         <section ref={homeRef}>
           <Hero />
@@ -24,19 +24,19 @@ function App() {
         {/* <section>
           <Items />
         </section> */}
-        <section ref={coffeeRef}>
+        <section ref={coffeeRef} className="scroll-mt-20">
           <Menu />
         </section>
-        <section ref={shopRef}>
+        <section ref={shopRef} className="scroll-mt-20">
           <BeansPromo />
         </section>
-        <section ref={reviewRef}>
+        <section ref={reviewRef} className="scroll-mt-40">
           <Testimonial />
         </section>
-        <section ref={contactRef}>
+        <section ref={contactRef} className="scroll-mt-20">
           <Contact />
+          <Footer />
         </section>
-        <Footer />
       </div>
     </>
   );
