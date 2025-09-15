@@ -19,7 +19,7 @@ function App() {
       <div className="flex flex-col gap-y-40">
         <Navbar refs={{ homeRef, coffeeRef, shopRef, reviewRef, contactRef }} />
         <section ref={homeRef}>
-          <Hero />
+          <Hero ref={{ coffeeRef }} />
         </section>
         {/* <section>
           <Items />

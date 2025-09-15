@@ -1,8 +1,11 @@
 import { delay } from "motion";
 import { motion } from "motion/react";
-export default function Hero() {
+export default function Hero({ ref }) {
   const blurUp = { opacity: 0, y: 30, filter: "blur(10px)" };
   const noblurUp = { opacity: 1, y: 0, filter: "blur(0px)" };
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <motion.div
@@ -40,6 +43,9 @@ export default function Hero() {
             animate={noblurUp}
             transition={{ delay: 0.6, duration: 0.3 }}
             className="flex bg-white text-black w-max px-9 py-3 rounded-full text-sm mt-3"
+            onClick={() => {
+              scrollToSection(ref.coffeeRef);
+            }}
           >
             Order Now
           </motion.button>
