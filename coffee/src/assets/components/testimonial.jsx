@@ -1,4 +1,7 @@
+import { motion } from "motion/react";
 export default function Testimonial() {
+  const blurUp = { opacity: 0, y: 30, filter: "blur(10px)" };
+  const noblurUp = { opacity: 1, y: 0, filter: "blur(0px)" };
   const review = [
     {
       id: 1,
@@ -31,14 +34,28 @@ export default function Testimonial() {
         style={{ fontFamily: "'Poppins', 'sans-serif'" }}
         className="flex flex-col py-5 justify-center items-center bg-white"
       >
-        <div style={{ fontFamily: "'Seaweed Script', 'sans-serif'" }}>
+        <motion.div
+          initial={blurUp}
+          animate={noblurUp}
+          transition={{ duration: 0.2, delay: 0.3 }}
+          style={{ fontFamily: "'Seaweed Script', 'sans-serif'" }}
+        >
           Come and join
-        </div>
-        <p>OUR HAPPY CUSTOMERS</p>
+        </motion.div>
+        <motion.p
+          initial={blurUp}
+          animate={noblurUp}
+          transition={{ duration: 0.2, delay: 0.4 }}
+        >
+          OUR HAPPY CUSTOMERS
+        </motion.p>
         <div className="flex flex-wrap grow justify-evenly">
           {review.map((person) => {
             return (
-              <div
+              <motion.div
+                initial={blurUp}
+                animate={noblurUp}
+                transition={{ duration: 0.2, delay: 0.5 }}
                 key={person.id}
                 className="bg-[#EEEBE6] flex flex-col justify-center items-center  sm:w-96 p-3 rounded-lg shadow-lg m-3"
               >
@@ -59,7 +76,7 @@ export default function Testimonial() {
                   </div>
                 </div>
                 <div className="m-2 text-neutral-600">{person.rev}</div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

@@ -1,6 +1,9 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function CoffeeMenu() {
+  const blurUp = { opacity: 0, y: 30, filter: "blur(10px)" };
+  const noblurUp = { opacity: 1, y: 0, filter: "blur(0px)" };
   const coffee = [
     {
       id: 1,
@@ -37,13 +40,21 @@ export default function CoffeeMenu() {
       style={{ fontFamily: "'Poppins', sans-serif" }}
       className="flex  flex-col items-center "
     >
-      <p className="font-bold text-[#2D251E] p-2 m-2 text-xl">
+      <motion.p
+        initial={blurUp}
+        animate={noblurUp}
+        transition={{ duration: 0.2, delay: 0.3 }}
+        className="font-bold text-[#2D251E] p-2 m-2 text-xl"
+      >
         OUR SPECIAL COFFEE
-      </p>
+      </motion.p>
       <div className="flex grow flex-wrap w-full justify-evenly sm:w-[80vw]">
         {coffee.map((item) => {
           return (
-            <div
+            <motion.div
+              initial={blurUp}
+              animate={noblurUp}
+              transition={{ duration: 0.2, delay: 0.4 }}
               className="w-80 p-2 bg-[#EEEBE6] flex flex-col justify-evenly m-2 gap-y-3 rounded-lg"
               key={item.id}
             >
@@ -58,7 +69,7 @@ export default function CoffeeMenu() {
                   Order Now
                 </button>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

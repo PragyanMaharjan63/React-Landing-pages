@@ -1,9 +1,15 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Footer() {
+  const blurUp = { opacity: 0, y: 30, filter: "blur(10px)" };
+  const noblurUp = { opacity: 1, y: 0, filter: "blur(0px)" };
   return (
     <>
-      <div
+      <motion.div
+        initial={blurUp}
+        animate={noblurUp}
+        transition={{ duration: 0.2, delay: 0.4 }}
         style={{ fontFamily: "'Poppins','sans-serif'" }}
         className="px-10 flex flex-col md:flex-row justify-evenly grow flex-wrap bg-[#2F251C] text-white py-15"
       >
@@ -41,7 +47,7 @@ export default function Footer() {
             <Linkedin />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

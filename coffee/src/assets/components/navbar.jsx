@@ -2,7 +2,7 @@ import { Menu, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-export default function Navbar() {
+export default function Navbar({ refs }) {
   const [hamburger, setHamburger] = useState(false);
   const [scrolled, setScroll] = useState(false);
   useEffect(() => {
@@ -18,6 +18,9 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <div
@@ -45,6 +48,9 @@ export default function Navbar() {
             className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
             } sm:bg-transparent  hover:cursor-pointer`}
+            onClick={() => {
+              scrollToSection(refs.homeRef);
+            }}
           >
             HOME
           </motion.li>
@@ -55,19 +61,13 @@ export default function Navbar() {
             className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
             } sm:bg-transparent hover:cursor-pointer`}
+            onClick={() => {
+              scrollToSection(refs.coffeeRef);
+            }}
           >
             COFFEE
           </motion.li>
-          <motion.li
-            initial={{ y: 30, filter: "blur(10px)" }}
-            animate={{ y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.2, delay: 0.5 }}
-            className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
-              scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
-            } sm:bg-transparent hover:cursor-pointer`}
-          >
-            BAKERY
-          </motion.li>
+
           <motion.li
             initial={{ y: 30, filter: "blur(10px)" }}
             animate={{ y: 0, filter: "blur(0px)" }}
@@ -75,6 +75,9 @@ export default function Navbar() {
             className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
             } sm:bg-transparent hover:cursor-pointer`}
+            onClick={() => {
+              scrollToSection(refs.shopRef);
+            }}
           >
             SHOP
           </motion.li>
@@ -85,6 +88,9 @@ export default function Navbar() {
             className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
             } sm:bg-transparent hover:cursor-pointer`}
+            onClick={() => {
+              scrollToSection(refs.aboutRef);
+            }}
           >
             ABOUT
           </motion.li>
@@ -95,8 +101,11 @@ export default function Navbar() {
             className={`px-10 py-3  sm:p-0 hover:font-bold bg-[#E2D9C8] text-stone-800 ${
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
             } sm:bg-transparent hover:cursor-pointer`}
+            onClick={() => {
+              scrollToSection(refs.contactRef);
+            }}
           >
-            LOGIN
+            CONTACT
           </motion.li>
         </div>
 
