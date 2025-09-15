@@ -89,10 +89,10 @@ export default function Navbar({ refs }) {
               scrolled ? "sm:text-stone-800" : "sm:text-neutral-300"
             } sm:bg-transparent hover:cursor-pointer`}
             onClick={() => {
-              scrollToSection(refs.aboutRef);
+              scrollToSection(refs.reviewRef);
             }}
           >
-            ABOUT
+            REVIEWS
           </motion.li>
           <motion.li
             initial={{ y: 30, filter: "blur(10px)" }}

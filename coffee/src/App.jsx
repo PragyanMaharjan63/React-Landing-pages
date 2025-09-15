@@ -12,12 +12,12 @@ function App() {
   const homeRef = useRef(null);
   const coffeeRef = useRef(null);
   const shopRef = useRef(null);
-  const aboutRef = useRef(null);
+  const reviewRef = useRef(null);
   const contactRef = useRef(null);
   return (
     <>
       <div>
-        <Navbar refs={{ homeRef, coffeeRef, shopRef, aboutRef, contactRef }} />
+        <Navbar refs={{ homeRef, coffeeRef, shopRef, reviewRef, contactRef }} />
         <section ref={homeRef}>
           <Hero />
         </section>
@@ -30,7 +30,7 @@ function App() {
         <section ref={shopRef}>
           <BeansPromo />
         </section>
-        <section ref={aboutRef}>
+        <section ref={reviewRef}>
           <Testimonial />
         </section>
         <section ref={contactRef}>
