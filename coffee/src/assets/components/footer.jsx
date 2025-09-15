@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <div
         style={{ fontFamily: "'Poppins','sans-serif'" }}
-        className="flex justify-evenly grow flex-wrap bg-[#2F251C] text-white py-15"
+        className="px-10 flex flex-col md:flex-row justify-evenly grow flex-wrap bg-[#2F251C] text-white py-15"
       >
         <p className="font-bold text-3xl my-2">COFFEE</p>
         <div className="flex flex-col gap-y-3 my-2">
